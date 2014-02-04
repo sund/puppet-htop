@@ -33,7 +33,7 @@
 #
 # === Copyright
 #
-# Copyright 2014 Your name here, unless otherwise noted.
+# Copyright 2014 sund.
 #
 class htop {
     include htop::params
