@@ -21,9 +21,14 @@
 #
 # Copyright 2014 sund.
 #
-class htop {
-    include htop::params
-    
-    include htop::install
+class htop (
+  $package_ensure = 'present',
+  $package_name   = $::htop::params::package_name,
+) inherits htop::params{
+
+  package { 'htop',
+    ensure => $package_ensure,
+    name   => $package_name,
+  }
 
 }

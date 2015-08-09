@@ -1,20 +1,8 @@
+# defaults!
 class htop::params {
-  case $::osfamily {
-    debian: {
-      $package_name = 'htop'
-    }
-    redhat: {
-      $package_name = 'htop'
-    }
-    default: {
-      case $::operatingsystem {
-        gentoo: {
-          $package_name = 'htop'
-        }
-        default: {
-          fail("Unsupported platform: ${::osfamily}/${::operatingsystem}")
-        }
-      }
-    }
+  $package_name = $::osfamily ? {
+    'debian' => 'htop',
+    'redhat' => 'htop',
+    default  => 'htop',
   }
 }
