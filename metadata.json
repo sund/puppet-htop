@@ -1,0 +1,11 @@
+{
+  "name": "sund-htop",
+  "version": "0.1.1",
+  "source": "https://github.com/sund/puppet-htop",
+  "author": "sund",
+  "license": "GPL-2.0",
+  "summary": "a module for htop",
+  "description": "ensures htop is installed",
+  "project_page": "https://github.com/sund/puppet-htop",
+  "dependencies": [ ]
+}
