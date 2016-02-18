@@ -26,7 +26,7 @@ class htop (
   $package_name   = $::htop::params::package_name,
 ) inherits htop::params{
 
-  package { 'htop',
+  package { 'htop':
     ensure => $package_ensure,
     name   => $package_name,
   }
